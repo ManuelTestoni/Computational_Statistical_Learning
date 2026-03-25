@@ -77,12 +77,12 @@ def main():
     train_decision_tree(train_X,train_y,test_X,test_y)
     print("Before starting random forest training i have to ask you to insert a number of estimator to test" \
     "variability of ensemble method. \n TIP: Try insertin 10 and next run try inserting 50")
-    n_estimators = input()
+    n_estimators = int(input())
     print("RANDOM FOREST")
     train_random_forest(train_X, train_y, test_X, test_y, n_estimators)
     print("Before starting ada boost training i have to ask you to insert a number of estimator to test" \
     "variability of ensemble method. \n TIP: Try insertin 10 and next run try inserting 50")
-    n_estimators = input()
+    n_estimators = int(input())
     print("ADA BOOST")
     train_ada_boos(train_X, train_y, test_X, test_y, n_estimators)
     
