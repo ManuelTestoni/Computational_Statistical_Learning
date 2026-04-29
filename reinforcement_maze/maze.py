@@ -103,6 +103,7 @@ class QAgent:
             return random.randint(0, 3) # Esplora
         return np.argmax(self.q_table[state]) # Sfrutta la conoscenza
 
+    # using bellman equation to update q_table
     def update(self, s, a, r, s_next):
         target = r + self.gamma * np.max(self.q_table[s_next])
         self.q_table[s][a] += self.alpha * (target - self.q_table[s][a])
